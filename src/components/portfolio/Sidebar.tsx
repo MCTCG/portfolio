@@ -8,11 +8,11 @@ export function Sidebar() {
   const { t, locale, setLocale } = useLocale();
   const { location } = useRouterState();
 
-  const links = [
+  const links: { to: "/" | "/cv" | "/contact"; label: string; icon: typeof Home; exact?: boolean }[] = [
     { to: "/", label: t.nav.home, icon: Home, exact: true },
     { to: "/cv", label: t.nav.cv, icon: FileText },
     { to: "/contact", label: t.nav.contact, icon: Mail },
-  ] as const;
+  ];
 
   const isActive = (to: string, exact?: boolean) =>
     exact ? location.pathname === to : location.pathname.startsWith(to);
