@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { useLocale } from "@/i18n/LocaleContext";
 import { PageShell, SectionTitle } from "@/components/portfolio/PageShell";
+import wavImg from "@/assets/portfolio/filtragenum.png";
+import thermoImg from "@/assets/portfolio/thermo.jpg";
+import robotImg from "@/assets/portfolio/Temp.jpg";
+import ssiImg from "@/assets/portfolio/SSI.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,9 +22,15 @@ export const Route = createFileRoute("/")({
 
 const PROJECT_KEYS = ["wav", "thermo", "robot"] as const;
 const projectImages: Record<(typeof PROJECT_KEYS)[number], string> = {
-  wav: "https://mctcg.github.io/Portfolio-Page/Wav.jpg",
-  thermo: "https://mctcg.github.io/Portfolio-Page/Thermo.jpg",
-  robot: "https://mctcg.github.io/Portfolio-Page/Robot.jpg",
+  wav: wavImg,
+  thermo: thermoImg,
+  robot: robotImg,
+};
+
+const projectFit: Record<(typeof PROJECT_KEYS)[number], string> = {
+  wav: "object-contain bg-surface p-4",
+  thermo: "object-cover",
+  robot: "object-cover",
 };
 
 function Stat({ value, label, accent }: { value: string; label: string; accent?: boolean }) {
@@ -85,7 +95,7 @@ function Index() {
                       src={projectImages[key]}
                       alt={p.title}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${projectFit[key]}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent opacity-80" />
                   </div>
@@ -134,7 +144,7 @@ function Index() {
           <p className="text-xs font-mono uppercase tracking-[0.2em] text-primary mb-4">
             {home.hobbiesTitle}
           </p>
-          <ul className="space-y-2.5">
+          <ul className="space-y-2.5 mb-5">
             {home.hobbies.map((h) => (
               <li key={h} className="flex items-center gap-2.5 text-sm text-foreground/80">
                 <span className="w-1 h-1 rounded-full bg-primary" />
@@ -142,6 +152,14 @@ function Index() {
               </li>
             ))}
           </ul>
+          <div className="rounded-xl overflow-hidden border border-border bg-surface/40 aspect-square flex items-center justify-center p-3">
+            <img
+              src={ssiImg}
+              alt="SSI Junior Diver certification"
+              loading="lazy"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
         </div>
       </section>
     </PageShell>

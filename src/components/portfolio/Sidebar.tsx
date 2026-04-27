@@ -3,6 +3,7 @@ import { Home, FileText, Mail, Download, Globe } from "lucide-react";
 import { useLocale } from "@/i18n/LocaleContext";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import headshot from "@/assets/portfolio/headshot.png";
 
 export function Sidebar() {
   const { t, locale, setLocale } = useLocale();
@@ -24,9 +25,11 @@ export function Sidebar() {
         <Link to="/" className="flex items-center gap-3 group">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-primary blur-md opacity-60 group-hover:opacity-90 transition-opacity" />
-            <div className="relative w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center font-display font-bold text-primary-foreground text-lg ring-2 ring-primary/40">
-              MC
-            </div>
+            <img
+              src={headshot}
+              alt="Mathéo Caro"
+              className="relative w-12 h-12 rounded-full object-cover ring-2 ring-primary/40 group-hover:ring-primary transition"
+            />
           </div>
           <div>
             <p className="font-display font-semibold text-foreground leading-tight">Mathéo Caro</p>
