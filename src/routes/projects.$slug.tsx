@@ -43,7 +43,8 @@ export const Route = createFileRoute("/projects/$slug")({
 });
 
 function ProjectPage() {
-  const { slug } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { slug: Slug };
+  const slug = data.slug;
   const { t } = useLocale();
   const p = t.projects.items[slug];
 
