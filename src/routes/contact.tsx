@@ -41,11 +41,23 @@ function ContactPage() {
           className="glass card-glow rounded-2xl p-7 group flex flex-col gap-3"
         >
           <Phone className="w-7 h-7 text-primary" />
-          <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground">{c.phone.split(" ")[0] === "+33" ? "Phone" : "Phone"}</p>
+          <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground">Phone</p>
           <p className="font-display font-semibold text-foreground group-hover:text-primary transition-colors">
             {c.phone}
           </p>
           <p className="text-sm text-muted-foreground">🇫🇷 France</p>
+        </a>
+
+        <a
+          href="tel:+584244403727"
+          className="glass card-glow rounded-2xl p-7 group flex flex-col gap-3"
+        >
+          <Phone className="w-7 h-7 text-primary" />
+          <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground">Phone</p>
+          <p className="font-display font-semibold text-foreground group-hover:text-primary transition-colors">
+            +58 0424 440 3727
+          </p>
+          <p className="text-sm text-muted-foreground">🇻🇪 Venezuela</p>
         </a>
 
         <div className="glass rounded-2xl p-7 flex flex-col gap-3 md:col-span-2">
