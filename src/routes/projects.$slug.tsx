@@ -3,14 +3,23 @@ import { useLocale } from "@/i18n/LocaleContext";
 import { PageShell } from "@/components/portfolio/PageShell";
 import { ArrowLeft } from "lucide-react";
 import { dict } from "@/i18n/content";
+import wavImg from "@/assets/portfolio/filtragenum.png";
+import thermoImg from "@/assets/portfolio/thermo.jpg";
+import robotImg from "@/assets/portfolio/Temp.jpg";
 
 const VALID = ["wav", "thermo", "robot"] as const;
 type Slug = (typeof VALID)[number];
 
 const projectImages: Record<Slug, string> = {
-  wav: "https://mctcg.github.io/Portfolio-Page/Wav.jpg",
-  thermo: "https://mctcg.github.io/Portfolio-Page/Thermo.jpg",
-  robot: "https://mctcg.github.io/Portfolio-Page/Robot.jpg",
+  wav: wavImg,
+  thermo: thermoImg,
+  robot: robotImg,
+};
+
+const projectFit: Record<Slug, string> = {
+  wav: "object-contain bg-surface p-8",
+  thermo: "object-cover",
+  robot: "object-cover",
 };
 
 export const Route = createFileRoute("/projects/$slug")({
@@ -65,9 +74,9 @@ function ProjectPage() {
           <img
             src={projectImages[slug]}
             alt={p.title}
-            className="w-full h-full object-cover"
+            className={`w-full h-full ${projectFit[slug]}`}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent pointer-events-none" />
         </div>
       </div>
 
