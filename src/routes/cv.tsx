@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLocale } from "@/i18n/LocaleContext";
 import { PageShell, SectionTitle } from "@/components/portfolio/PageShell";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Download, ExternalLink, FileText } from "lucide-react";
 
 export const Route = createFileRoute("/cv")({
   head: () => ({
@@ -18,10 +18,58 @@ export const Route = createFileRoute("/cv")({
 function CvPage() {
   const { t } = useLocale();
   const cv = t.cv;
+  const isEn = t.nav.home === "Home";
+  const cvUrl = "/CV-Matheo-Caro.pdf";
 
   return (
     <PageShell>
       <SectionTitle eyebrow="CV / Resume" title={cv.title} />
+
+      {/* Embedded CV preview */}
+      <div className="mt-10 glass rounded-2xl overflow-hidden">
+        <div className="flex items-center justify-between px-5 py-3 border-b border-border bg-surface/40">
+          <div className="flex items-center gap-2.5">
+            <FileText className="w-4 h-4 text-primary" />
+            <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
+              CV-Matheo-Caro.pdf
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <a
+              href={cvUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+              {isEn ? "Open" : "Ouvrir"}
+            </a>
+            <a
+              href={cvUrl}
+              download
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium bg-primary text-primary-foreground hover:shadow-[var(--shadow-glow)] transition-all"
+            >
+              <Download className="w-3.5 h-3.5" />
+              {isEn ? "Download" : "Télécharger"}
+            </a>
+          </div>
+        </div>
+        <object
+          data={`${cvUrl}#view=FitH&toolbar=0&navpanes=0`}
+          type="application/pdf"
+          className="w-full h-[70vh] min-h-[520px] bg-background"
+          aria-label="CV preview"
+        >
+          <div className="p-8 text-center text-sm text-muted-foreground">
+            {isEn
+              ? "Your browser can't preview the PDF. "
+              : "Votre navigateur ne peut pas afficher le PDF. "}
+            <a href={cvUrl} download className="text-primary hover:underline">
+              {isEn ? "Download it instead." : "Téléchargez-le."}
+            </a>
+          </div>
+        </object>
+      </div>
 
       <div className="mt-12 grid lg:grid-cols-3 gap-6">
         {/* Profile card */}
