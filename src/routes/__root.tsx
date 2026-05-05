@@ -34,9 +34,13 @@ export const Route = createRootRoute({
       { name: "description", content: "Étudiant BUT 2 GEII parcours AII — projets en automatisme, systèmes embarqués, FPGA et traitement du signal." },
       { name: "author", content: "Mathéo Caro" },
       { property: "og:title", content: "Mathéo Caro — Portfolio GEII / AII" },
-      { property: "og:description", content: "Engineering portfolio: automation, embedded systems, FPGA, signal processing." },
+      { property: "og:description", content: "Étudiant BUT 2 GEII parcours AII — projets en automatisme, systèmes embarqués, FPGA et traitement du signal." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mathéo Caro — Portfolio GEII / AII" },
+      { name: "twitter:description", content: "Étudiant BUT 2 GEII parcours AII — projets en automatisme, systèmes embarqués, FPGA et traitement du signal." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e4c2bc05-77b9-4f7e-8ae1-314cfc462aca" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e4c2bc05-77b9-4f7e-8ae1-314cfc462aca" },
     ],
     links: [
       {
