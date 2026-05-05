@@ -157,7 +157,7 @@ export const dict: Record<Locale, Dict> = {
           school: "Diplôme digital de programmation",
         },
         {
-          date: "—",
+          date: "Été 2022",
           title: "Certificats",
           school: "Électronique Arduino · Programme universitaire UAM",
         },
@@ -317,7 +317,7 @@ export const dict: Record<Locale, Dict> = {
         { date: "Since Sept. 2024", title: "BUT 1 & 2 GEII", school: "IUT de Vélizy, UVSQ — Vélizy-Villacoublay" },
         { date: "2022 – 2024", title: "American High School Diploma", school: "CIC, Valencia — Venezuela", note: "Specialization in mathematics." },
         { date: "June 2024", title: "Harvard CS50x", school: "Digital programming diploma" },
-        { date: "—", title: "Certificates", school: "Electronics & Arduino · UAM University Program" },
+        { date: "Summer 2022", title: "Certificates", school: "Electronics & Arduino · UAM University Program" },
       ],
       experience: "Industry experience",
       expItems: [
