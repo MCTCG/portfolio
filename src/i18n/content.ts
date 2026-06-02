@@ -261,6 +261,20 @@ export const dict: Record<Locale, Dict> = {
           body:
             "Conception complète d'un robot autonome : usinage des pièces mécaniques, intégration des capteurs ultrasons pour la détection d'obstacles, et programmation embarquée en C/C++ pour la prise de décision. L'optimisation du couple et de la masse a été clé pour battre les autres équipes lors de la course. Une expérience complète couvrant mécanique, électronique et logiciel.",
         },
+        nas: {
+          title: "Configuration NAS & DNS",
+          tagline: "Projet personnel — Réseau & auto-hébergement",
+          teaser: "Mise en place d'un serveur NAS avec résolution DNS personnalisée",
+          objectives: [
+            "Installer et configurer un serveur NAS pour le stockage en réseau.",
+            "Configurer un serveur DNS local pour une résolution de noms personnalisée.",
+            "Documenter chaque étape pour une remise en service rapide.",
+          ],
+          tech: ["NAS", "DNS", "Linux", "Réseau IP"],
+          body:
+            "Projet personnel d'auto-hébergement visant à centraliser le stockage de mes données et à maîtriser les fondamentaux de l'administration réseau. La configuration couvre l'installation du NAS, la définition des partages, la mise en place d'un service DNS local pour accéder aux machines par nom plutôt que par adresse IP, ainsi que la rédaction d'une documentation complète. Une excellente entrée en matière côté infrastructure et systèmes.",
+          pdf: "/NAS-Configuration-DNS.pdf",
+        },
       },
     },
     footer: "© Mathéo Caro — Portfolio GEII / AII",
