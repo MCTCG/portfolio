@@ -116,6 +116,29 @@ function ProjectPage() {
         </p>
       </div>
 
+      {p.pdf && (
+        <div className="mt-12 glass rounded-2xl p-4 lg:p-6">
+          <div className="flex items-center justify-between mb-4 px-2">
+            <p className="text-xs font-mono uppercase tracking-[0.2em] text-primary">Documentation</p>
+            <a
+              href={p.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono uppercase tracking-wider text-primary hover:underline"
+            >
+              Open PDF ↗
+            </a>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-border bg-surface">
+            <iframe
+              src={p.pdf}
+              title={`${p.title} — PDF`}
+              className="w-full h-[80vh]"
+            />
+          </div>
+        </div>
+      )}
+
       <div className="mt-12">
         <Link
           to="/"
