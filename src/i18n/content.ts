@@ -69,7 +69,7 @@ type Dict = {
     technologies: string;
     implementation: string;
     items: Record<
-      "wav" | "thermo" | "robot",
+      "wav" | "thermo" | "robot" | "nas",
       {
         title: string;
         tagline: string;
@@ -77,6 +77,7 @@ type Dict = {
         objectives: string[];
         tech: string[];
         body: string;
+        pdf?: string;
       }
     >;
   };
@@ -260,6 +261,20 @@ export const dict: Record<Locale, Dict> = {
           body:
             "Conception complète d'un robot autonome : usinage des pièces mécaniques, intégration des capteurs ultrasons pour la détection d'obstacles, et programmation embarquée en C/C++ pour la prise de décision. L'optimisation du couple et de la masse a été clé pour battre les autres équipes lors de la course. Une expérience complète couvrant mécanique, électronique et logiciel.",
         },
+        nas: {
+          title: "Configuration NAS & DNS",
+          tagline: "Projet personnel — Réseau & auto-hébergement",
+          teaser: "Mise en place d'un serveur NAS avec résolution DNS personnalisée",
+          objectives: [
+            "Installer et configurer un serveur NAS pour le stockage en réseau.",
+            "Configurer un serveur DNS local pour une résolution de noms personnalisée.",
+            "Documenter chaque étape pour une remise en service rapide.",
+          ],
+          tech: ["NAS", "DNS", "Linux", "Réseau IP"],
+          body:
+            "Projet personnel d'auto-hébergement visant à centraliser le stockage de mes données et à maîtriser les fondamentaux de l'administration réseau. La configuration couvre l'installation du NAS, la définition des partages, la mise en place d'un service DNS local pour accéder aux machines par nom plutôt que par adresse IP, ainsi que la rédaction d'une documentation complète. Une excellente entrée en matière côté infrastructure et systèmes.",
+          pdf: "/NAS-Configuration-DNS.pdf",
+        },
       },
     },
     footer: "© Mathéo Caro — Portfolio GEII / AII",
@@ -395,6 +410,20 @@ export const dict: Record<Locale, Dict> = {
           tech: ["C / C++", "Mechanical machining", "HC-SR04 ultrasonic sensor"],
           body:
             "Full autonomous robot build: machining the mechanical parts, integrating ultrasonic sensors for obstacle detection, and embedded C/C++ programming for decision-making. Torque and weight optimization were key to winning the race. A complete experience spanning mechanics, electronics, and software.",
+        },
+        nas: {
+          title: "NAS & DNS configuration",
+          tagline: "Personal project — Networking & self-hosting",
+          teaser: "Setting up a NAS server with custom DNS resolution",
+          objectives: [
+            "Install and configure a NAS server for network storage.",
+            "Set up a local DNS server for custom name resolution.",
+            "Document every step for quick reinstallation.",
+          ],
+          tech: ["NAS", "DNS", "Linux", "IP networking"],
+          body:
+            "Personal self-hosting project to centralize my data storage while learning the fundamentals of network administration. The setup covers NAS installation, share configuration, deployment of a local DNS service so machines can be reached by name instead of IP, and full written documentation. A great gateway into infrastructure and systems work.",
+          pdf: "/NAS-Configuration-DNS.pdf",
         },
       },
     },

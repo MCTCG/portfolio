@@ -8,6 +8,7 @@ import wavImg from "@/assets/portfolio/filtragenum.png";
 import thermoImg from "@/assets/portfolio/thermo.jpg";
 import robotImg from "@/assets/portfolio/Temp.jpg";
 import ssiImg from "@/assets/portfolio/SSI.jpg";
+import nasImg from "@/assets/portfolio/nas.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,25 +22,27 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type ProjectKey = "wav" | "thermo" | "robot";
+type ProjectKey = "wav" | "thermo" | "robot" | "nas";
 type TabKey = "but1" | "but2" | "personal";
 
 const projectImages: Record<ProjectKey, string> = {
   wav: wavImg,
   thermo: thermoImg,
   robot: robotImg,
+  nas: nasImg,
 };
 
 const projectFit: Record<ProjectKey, string> = {
   wav: "object-contain bg-surface p-4",
   thermo: "object-cover",
   robot: "object-cover",
+  nas: "object-cover",
 };
 
 const projectsByTab: Record<TabKey, ProjectKey[]> = {
   but1: ["thermo", "robot"],
   but2: ["wav"],
-  personal: [],
+  personal: ["nas"],
 };
 
 function Stat({ value, label, accent }: { value: string; label: string; accent?: boolean }) {

@@ -6,20 +6,23 @@ import { dict } from "@/i18n/content";
 import wavImg from "@/assets/portfolio/filtragenum.png";
 import thermoImg from "@/assets/portfolio/thermo.jpg";
 import robotImg from "@/assets/portfolio/Temp.jpg";
+import nasImg from "@/assets/portfolio/nas.jpg";
 
-const VALID = ["wav", "thermo", "robot"] as const;
+const VALID = ["wav", "thermo", "robot", "nas"] as const;
 type Slug = (typeof VALID)[number];
 
 const projectImages: Record<Slug, string> = {
   wav: wavImg,
   thermo: thermoImg,
   robot: robotImg,
+  nas: nasImg,
 };
 
 const projectFit: Record<Slug, string> = {
   wav: "object-contain bg-surface p-8",
   thermo: "object-cover",
   robot: "object-cover",
+  nas: "object-cover",
 };
 
 export const Route = createFileRoute("/projects/$slug")({
@@ -112,6 +115,29 @@ function ProjectPage() {
           {p.body}
         </p>
       </div>
+
+      {p.pdf && (
+        <div className="mt-12 glass rounded-2xl p-4 lg:p-6">
+          <div className="flex items-center justify-between mb-4 px-2">
+            <p className="text-xs font-mono uppercase tracking-[0.2em] text-primary">Documentation</p>
+            <a
+              href={p.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono uppercase tracking-wider text-primary hover:underline"
+            >
+              Open PDF ↗
+            </a>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-border bg-surface">
+            <iframe
+              src={p.pdf}
+              title={`${p.title} — PDF`}
+              className="w-full h-[80vh]"
+            />
+          </div>
+        </div>
+      )}
 
       <div className="mt-12">
         <Link
