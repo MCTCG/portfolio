@@ -69,7 +69,7 @@ type Dict = {
     technologies: string;
     implementation: string;
     items: Record<
-      "wav" | "thermo" | "robot",
+      "wav" | "thermo" | "robot" | "nas",
       {
         title: string;
         tagline: string;
@@ -77,6 +77,7 @@ type Dict = {
         objectives: string[];
         tech: string[];
         body: string;
+        pdf?: string;
       }
     >;
   };
