@@ -6,20 +6,23 @@ import { dict } from "@/i18n/content";
 import wavImg from "@/assets/portfolio/filtragenum.png";
 import thermoImg from "@/assets/portfolio/thermo.jpg";
 import robotImg from "@/assets/portfolio/Temp.jpg";
+import nasImg from "@/assets/portfolio/nas.jpg";
 
-const VALID = ["wav", "thermo", "robot"] as const;
+const VALID = ["wav", "thermo", "robot", "nas"] as const;
 type Slug = (typeof VALID)[number];
 
 const projectImages: Record<Slug, string> = {
   wav: wavImg,
   thermo: thermoImg,
   robot: robotImg,
+  nas: nasImg,
 };
 
 const projectFit: Record<Slug, string> = {
   wav: "object-contain bg-surface p-8",
   thermo: "object-cover",
   robot: "object-cover",
+  nas: "object-cover",
 };
 
 export const Route = createFileRoute("/projects/$slug")({
