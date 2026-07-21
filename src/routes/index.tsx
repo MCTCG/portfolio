@@ -152,6 +152,7 @@ function Index() {
                 </p>
               </div>
             ) : (
+              <>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {activeKeys.map((key, i) => {
                   const p = t.projects.items[key];
@@ -191,6 +192,32 @@ function Index() {
                   );
                 })}
               </div>
+              {tab === "personal" && (
+                <div className="mt-12">
+                  <div className="flex items-baseline justify-between mb-5">
+                    <h3 className="text-xl md:text-2xl font-display font-semibold">
+                      {isEn ? "Microcontroller Projects" : "Projets Microcontrôleurs"}
+                    </h3>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                      {isEn ? "Raspberry Pi · Arduino" : "Raspberry Pi · Arduino"}
+                    </span>
+                  </div>
+                  <div className="glass card-glow rounded-2xl p-8 md:p-10 text-center">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                      <Sparkles className="w-5 h-5 text-primary" />
+                    </div>
+                    <h4 className="font-display text-lg text-foreground mb-2">
+                      {isEn ? "NAS to Pi migration — coming soon" : "Migration NAS vers Raspberry Pi — bientôt"}
+                    </h4>
+                    <p className="text-sm text-muted-foreground max-w-md mx-auto">
+                      {isEn
+                        ? "Migrating the NAS from a test laptop to a dedicated Raspberry Pi. Write-up and photos will be published here soon."
+                        : "Migration du NAS d'un ordinateur portable de test vers un Raspberry Pi dédié. Compte-rendu et photos publiés ici prochainement."}
+                    </p>
+                  </div>
+                </div>
+              )}
+              </>
             )}
           </motion.div>
         </AnimatePresence>
