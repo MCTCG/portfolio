@@ -116,7 +116,8 @@ function CvPage() {
           <ul className="space-y-2 text-sm text-foreground/85">
             <li>Anglais — C2 (TOEFL 107/120)</li>
             <li>Espagnol — C2</li>
-            <li>Français — C1</li>
+            <li>Français — C2</li>
+            <li>Portugais — A1</li>
           </ul>
         </div>
         <div className="glass rounded-2xl p-6">
@@ -177,7 +178,7 @@ function CvPage() {
 
       {/* University projects */}
       <h2 className="mt-16 mb-6 text-2xl font-display font-semibold">{cv.universityProjects}</h2>
-      {(["BUT 1", "BUT 2"] as const).map((y) => (
+      {(["BUT 3", "BUT 2", "BUT 1"] as const).map((y) => (
         <div key={y} className="mb-8">
           <p className="text-xs font-mono uppercase tracking-[0.2em] text-primary mb-3">{y}</p>
           <div className="grid md:grid-cols-2 gap-4">

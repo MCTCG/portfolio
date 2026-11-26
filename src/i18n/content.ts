@@ -53,7 +53,7 @@ type Dict = {
     skills: string;
     skillsGroups: { title: string; items: string[] }[];
     universityProjects: string;
-    uniProjects: { date: string; title: string; desc: string; year: "BUT 1" | "BUT 2" }[];
+    uniProjects: { date: string; title: string; desc: string; year: "BUT 1" | "BUT 2" | "BUT 3" }[];
   };
   contact: {
     title: string;
@@ -92,17 +92,17 @@ export const dict: Record<Locale, Dict> = {
       contact: "Contact",
       projects: "Projets",
       downloadCv: "Télécharger le CV",
-      role: "BUT 2 GEII · AII",
+      role: "BUT 3 GEII · AII",
     },
     home: {
       eyebrow: "Spécialisation Automatisme & Informatique Industrielle",
       title: "Génie électrique et",
       titleAccent: "informatique industrielle",
       intro:
-        "Étudiant en BUT 2 GEII (parcours AII), je me spécialise à l'intersection du Génie Électrique et de l'Informatique Industrielle — apprentissage automatique, systèmes embarqués et automatisation. Voici une sélection de mes projets concrets en vision et analyse de données.",
-      statProjects: "5",
+        "Étudiant en BUT 3 GEII (parcours AII), je me spécialise à l'intersection du Génie Électrique et de l'Informatique Industrielle — apprentissage automatique, systèmes embarqués et automatisation. Voici une sélection de mes projets concrets en vision et analyse de données.",
+      statProjects: "11",
       statProjectsLabel: "Grands projets en formation",
-      statSemesters: "4",
+      statSemesters: "5",
       statSemestersLabel: "Semestres de formation",
       statSpecialty: "AII",
       statSpecialtyLabel: "Automatisme & Informatique Industrielle",
@@ -114,7 +114,7 @@ export const dict: Record<Locale, Dict> = {
       aboutP1:
         "Au-delà des cours et des travaux pratiques, je suis motivé par la passion de résoudre des problèmes concrets en utilisant des systèmes intelligents. Mes études en GEII m'ont apporté une base solide à la fois en matériel (capteurs, systèmes embarqués) et en logiciel (Codeblocks, MatLab, LabView).",
       aboutP2:
-        "Je suis actuellement à la recherche d'une opportunité de stage où je pourrai appliquer mes compétences en apprentissage profond et acquérir une expérience pratique en milieu professionnel. Je crois au pouvoir de l'innovation collaborative et de l'apprentissage continu.",
+        "Après un stage BUT 2 chez PAVECA (Groupe Kruger) et une alternance en data centers, je recherche une alternance de 12 mois en cycle ingénieur dès septembre 2027. Je crois au pouvoir de l'innovation collaborative et de l'apprentissage continu.",
       hobbiesTitle: "Loisirs",
       hobbies: ["Volley-ball", "Kitesurf", "Plongée sous-marine", "Impression 3D", "Échecs"],
       universityTitle: "Projets universitaires",
@@ -125,9 +125,9 @@ export const dict: Record<Locale, Dict> = {
       subtitle: "Mathéo Caro",
       profile: "Profil",
       profileText:
-        "Fasciné par les défis de l'industrie et désireux de mettre en pratique mes connaissances en Génie Électrique et Informatique Industrielle, je recherche un stage d'une durée de 8 semaines minimum afin d'acquérir une première expérience professionnelle.",
-      age: "Âge — 20 ans (12/12/2005)",
-      availability: "Disponibilité — à partir du 20 avril 2025",
+        "Fort d'une solide expérience terrain en alternance et en milieu industriel (automatisation, systèmes embarqués, infrastructures techniques), je recherche une alternance de 12 mois dès septembre 2027 dans le cadre d'un cycle ingénieur.",
+      age: "Âge — 21 ans (12/12/2005)",
+      availability: "Disponibilité — alternance 12 mois dès sept. 2027",
       license: "Permis B en cours",
       contact: "Contact",
       languages: "Langues",
@@ -142,8 +142,8 @@ export const dict: Record<Locale, Dict> = {
       education: "Formation académique",
       eduItems: [
         {
-          date: "Depuis Sept. 2024",
-          title: "BUT 1 et 2 GEII",
+          date: "Sept. 2024 – Mai 2028",
+          title: "BUT 3 GEII (AII)",
           school: "IUT de Vélizy, UVSQ — Vélizy-Villacoublay",
         },
         {
@@ -153,7 +153,7 @@ export const dict: Record<Locale, Dict> = {
           note: "Spécialisation en mathématiques.",
         },
         {
-          date: "Juin 2024",
+          date: "Déc. 2023",
           title: "Harvard CS50x",
           school: "Diplôme digital de programmation",
         },
@@ -165,6 +165,8 @@ export const dict: Record<Locale, Dict> = {
       ],
       experience: "Expériences en industrie",
       expItems: [
+        { title: "Opérateur de Data Centers (Alternance BUT 3) — Oct. 2027 – Sept. 2028", company: "Contrôle d'accès (Mercury MR52, Abloy EL560, Vanderbilt), diagnostics & maintenance en environnement critique" },
+        { title: "Stage BUT 2 — PAVECA (Groupe Kruger) — 2026", company: "Ladder (Siemens LOGO!, WinRelais), sécurité ISO 45001, câblage d'armoires & moteurs — Venezuela" },
         {
           title: "Stage observation production plastique",
           company: "Plásticos Trébol (entreprise familiale) — Venezuela",
@@ -206,11 +208,14 @@ export const dict: Record<Locale, Dict> = {
         { date: "Janv. 2025", title: "Banc de test numérique", desc: "Banc de test contrôlé par carte numérique (décodage trame, FPGA…).", year: "BUT 2" },
         { date: "Févr. 2025", title: "Programmation d'automates", desc: "Programmation d'automates et micro-automates (Schneider, Arduino).", year: "BUT 2" },
         { date: "Sept. 2025", title: "Commande de bras manipulateur", desc: "Commande d'un bras manipulateur industriel.", year: "BUT 2" },
+        { date: "2026", title: "Compétition solaire (Mons, Belgique)", desc: "Compétition de récolte d'énergie solaire — 2ᵉ place.", year: "BUT 2" },
+        { date: "2026–2027", title: "Olympiades FANUC", desc: "Conception et simulation d'une cellule robotisée à partir d'un cahier des charges.", year: "BUT 3" },
+        { date: "2026–2027", title: "Projet CTA / GTB", desc: "Commande moteur via automate Siemens PXC4 pour l'extraction de fumées et CO₂ du FabLab.", year: "BUT 3" },
       ],
     },
     contact: {
       title: "Me contacter",
-      subtitle: "Disponible pour un stage à partir du 20 avril 2025.",
+      subtitle: "Recherche une alternance de 12 mois dès septembre 2027.",
       sendEmail: "Envoyer un email",
       location: "Vélizy-Villacoublay, France",
       phone: "+33 7 75 76 64 32",
@@ -286,17 +291,17 @@ export const dict: Record<Locale, Dict> = {
       contact: "Contact",
       projects: "Projects",
       downloadCv: "Download CV",
-      role: "BUT 2 GEII · AII",
+      role: "BUT 3 GEII · AII",
     },
     home: {
       eyebrow: "Specialization in Industrial Automation & Computing",
       title: "Electrical engineering &",
       titleAccent: "industrial computing",
       intro:
-        "Second-year BUT GEII student (AII track), I work at the intersection of electrical engineering and industrial computing — machine learning, embedded systems, and industrial automation. A selection of my hands-on projects in vision and data analysis.",
-      statProjects: "5",
+        "Third-year BUT GEII student (AII track), I work at the intersection of electrical engineering and industrial computing — machine learning, embedded systems, and industrial automation. A selection of my hands-on projects in vision and data analysis.",
+      statProjects: "11",
       statProjectsLabel: "Major projects completed",
-      statSemesters: "4",
+      statSemesters: "5",
       statSemestersLabel: "Semesters of training",
       statSpecialty: "AII",
       statSpecialtyLabel: "Industrial Automation & Computing",
@@ -308,7 +313,7 @@ export const dict: Record<Locale, Dict> = {
       aboutP1:
         "Beyond classes and labs, I'm driven by the passion to solve concrete problems with intelligent systems. My GEII studies gave me a solid foundation in both hardware (sensors, embedded systems) and software (Codeblocks, MatLab, LabView).",
       aboutP2:
-        "I'm currently looking for an internship to apply my skills in deep learning and gain practical industry experience. I believe in collaborative innovation and continuous learning.",
+        "After a BUT 2 internship at PAVECA (Kruger Group) and a data-center work-study, I'm looking for a 12-month engineering-school apprenticeship starting September 2027. I believe in collaborative innovation and continuous learning.",
       hobbiesTitle: "Hobbies",
       hobbies: ["Volleyball", "Kitesurfing", "Scuba diving", "3D printing", "Chess"],
       universityTitle: "University projects",
@@ -319,9 +324,9 @@ export const dict: Record<Locale, Dict> = {
       subtitle: "Mathéo Caro",
       profile: "Profile",
       profileText:
-        "Fascinated by industrial challenges and eager to apply my knowledge in Electrical Engineering and Industrial Computing, I'm seeking an internship of at least 8 weeks to gain my first professional experience.",
-      age: "Age — 20 (born 12/12/2005)",
-      availability: "Available from April 20, 2025",
+        "With solid hands-on experience from work-study and industrial settings (automation, embedded systems, technical infrastructure), I'm seeking a 12-month apprenticeship starting September 2027 as part of an engineering degree.",
+      age: "Age — 21 (born 12/12/2005)",
+      availability: "Available — 12-month apprenticeship from Sept. 2027",
       license: "Driver's license in progress",
       contact: "Contact",
       languages: "Languages",
@@ -329,13 +334,15 @@ export const dict: Record<Locale, Dict> = {
       qualitiesList: ["Perseverance", "Critical thinking", "Teamwork", "Project design", "Effective communication"],
       education: "Education",
       eduItems: [
-        { date: "Since Sept. 2024", title: "BUT 1 & 2 GEII", school: "IUT de Vélizy, UVSQ — Vélizy-Villacoublay" },
+        { date: "Sept. 2024 – May 2028", title: "BUT 3 GEII (AII)", school: "IUT de Vélizy, UVSQ — Vélizy-Villacoublay" },
         { date: "2022 – 2024", title: "American High School Diploma", school: "CIC, Valencia — Venezuela", note: "Specialization in mathematics." },
-        { date: "June 2024", title: "Harvard CS50x", school: "Digital programming diploma" },
+        { date: "Dec. 2023", title: "Harvard CS50x", school: "Digital programming diploma" },
         { date: "Summer 2022", title: "Certificates", school: "Electronics & Arduino · UAM University Program" },
       ],
       experience: "Industry experience",
       expItems: [
+        { title: "Data Center Operator (BUT 3 work-study) — Oct. 2027 – Sept. 2028", company: "Access control (Mercury MR52, Abloy EL560, Vanderbilt), diagnostics & maintenance in critical environments" },
+        { title: "BUT 2 internship — PAVECA (Kruger Group) — 2026", company: "Ladder (Siemens LOGO!, WinRelais), ISO 45001 safety, cabinet wiring & motors — Venezuela" },
         { title: "Plastic production observation internship", company: "Plásticos Trébol (family company) — Venezuela" },
         { title: "Mold-maker apprentice", company: "Observation of CNC processes" },
       ],
@@ -356,11 +363,14 @@ export const dict: Record<Locale, Dict> = {
         { date: "Jan. 2025", title: "Digital test bench", desc: "Test bench controlled by a digital board (frame decoding, FPGA…).", year: "BUT 2" },
         { date: "Feb. 2025", title: "PLC programming", desc: "PLC and micro-PLC programming (Schneider, Arduino).", year: "BUT 2" },
         { date: "Sept. 2025", title: "Robotic arm control", desc: "Control of an industrial robotic arm.", year: "BUT 2" },
+        { date: "2026", title: "Solar competition (Mons, Belgium)", desc: "Solar energy harvesting competition — 2nd place.", year: "BUT 2" },
+        { date: "2026–2027", title: "FANUC Olympiads", desc: "Design and simulation of a robotic cell from a specification.", year: "BUT 3" },
+        { date: "2026–2027", title: "HVAC / BMS project", desc: "Motor control via Siemens PXC4 PLC for FabLab smoke and CO₂ extraction.", year: "BUT 3" },
       ],
     },
     contact: {
       title: "Get in touch",
-      subtitle: "Available for an internship from April 20, 2025.",
+      subtitle: "Seeking a 12-month apprenticeship from September 2027.",
       sendEmail: "Send an email",
       location: "Vélizy-Villacoublay, France",
       phone: "+33 7 75 76 64 32",
